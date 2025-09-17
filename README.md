@@ -1,2 +1,5 @@
-# DSA_CODES_USING_C-
-This is my practice questions which improve my DSA journey.
+"# DSA_CODES_USING_C-" 
+# Table of Contents
+
+- [Hashing](#hashing)
+
