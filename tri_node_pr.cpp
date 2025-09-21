@@ -4,26 +4,7 @@
 #include<vector>
 
 using namespace std;
-/*
-int ex(vector<vector<int>&tri)
-{
-    int n=a.size();
-    vector<int>op(n,0);
-    for(int i=0;i<n;i++)
-    {
-        for(int j=i;j>=0;j--)
-        {
-            if(i==j)
-                op[j]=op[j-1]+tri[i][j];
-            else if(j==0)
-                op[j]=op[j]+tri[i][j];
-            else
-                op[j]=min(op[j],op[j-1])+tri[i][j];
-        }
-    }
-    return *min_element(op.begin(),op.end());
-}
-*/
+
 struct node
 {
     int data;
