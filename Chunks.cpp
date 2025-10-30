@@ -1,0 +1,40 @@
+#include<iostream>
+#include<climits>
+#include<math.h>
+#include<vector>
+
+using namespace std;
+
+int mc(vector<int>& arr)
+{
+    int n=arr.size();
+    vector<int> prefixMax(begin(arr),end(arr));
+    vector<int> suffixMin(begin(arr),end(arr));
+
+    for(int i=1;i<n;i++)
+    {
+        prefixMax[i]=max(prefixMax[i],prefixMax[i-1]);
+    }
+    for(int i=n-2;i>=0;i--)
+    {
+        suffixMin[i]=min(suffixMin[i],suffixMin[i+1]);
+    }
+    int c=0;
+    for(int i=0;i<n;i++)
+    {
+        int pm=i>0?prefixMax[i-1]:-1;
+        int bm=suffixMin[i];
+        if(pm<bm)
+        {
+            c++;
+        }
+    }
+    return c;
+}
+
+int main()
+{
+    vector<int>arr={1, 0, 2, 3, 4};
+    cout<<"ans="<< mc(arr)<<endl;
+    return 0;
+}
